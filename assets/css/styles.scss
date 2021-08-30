@@ -490,6 +490,9 @@ img{
 @media screen and(max-width: 768px){
     .bd-grid{
         grid-column-gap: 2rem;
+        margin-left: var(--mb-2);
+        margin-right: var(--mb-2);
+        
     }
     .home{
         margin-left: 40px;
