@@ -191,39 +191,30 @@ img{
 
 /*===== HOME =====*/
 .home{
+    height: 100vh;
     display: flex;
-    flex-direction: row;
-    row-gap: 1rem;
-
-    &__data{
-        margin-bottom: 30%;
-    }
-    &__title{
-        font-size: var(--big-font-size);
-        margin-bottom: var(--mb-5);
-
-        &-color{
-            color: var(--first-color);
-        }
-    }
-    &__social{
-        &-icon{
-            width: max-content;
-            margin-bottom: var(--mb-2);
-            font-size: 1.5rem;
-            color: var(--second-color);
-            margin-left: 20px;
-
-            &:hover{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    &__data {
+        margin-top: 50px;
+        text-align: center;
+        &__social {
+            a:visited {
                 color: var(--first-color);
             }
+            color: var(--first-color);
+                &-icon {
+                    color: var(--first-color);
+                }
         }
     }
-    & img{
-        position: absolute;
-        right: 0;
-        bottom: 40%;
-        width: 350px;
+    &__img {
+        width: 300px;
+    }
+    & img {
+        width: 100%;
         border-radius: 50%;
     }
 }
@@ -421,23 +412,7 @@ img{
         }
     }
     .home{
-        height: 100vh;
-        &__data{
-            align-self: flex-end;
-        }
-        &__social{
-            padding-top: 0;
-            padding-bottom: 2.5rem;
-            flex-direction: row;
-            &-icon{
-                margin-bottom: 0;
-                margin-right: var(--mb-4);
-            }
-        }
-        &__img{
-            width: 457px;
-            bottom: 15%;
-        }
+
     }
 
     .about{
@@ -481,26 +456,20 @@ img{
         margin-left: auto;
         margin-right: auto;
     }
-    .home{
-        &__img{
-            right: 10%;
-        }
-    }
 }
 @media screen and(max-width: 768px){
     .bd-grid{
         grid-column-gap: 2rem;
     }
-    .home{
-        margin-left: 40px;
-        &__data{
-            margin: auto;
-        }
-        & img{
-            display: none;
-        }
-    }
+
     .home__social-icon{
         margin-left: 35px;
+    }
+}
+@media screen and(max-height: 600px){
+    .home {
+        & img {
+            display: none;
+        }
     }
 }

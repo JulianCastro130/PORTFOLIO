@@ -216,48 +216,46 @@ img {
 
 /*===== HOME =====*/
 .home {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  row-gap: 1rem;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
 }
 
 .home__data {
-  margin-bottom: 30%;
+  margin-top: 50px;
+  text-align: center;
 }
 
-.home__title {
-  font-size: var(--big-font-size);
-  margin-bottom: var(--mb-5);
-}
-
-.home__title-color {
+.home__data__social {
   color: var(--first-color);
 }
 
-.home__social-icon {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin-bottom: var(--mb-2);
-  font-size: 1.5rem;
-  color: var(--second-color);
-  margin-left: 20px;
+.home__data__social a:visited {
+  color: var(--first-color);
 }
 
-.home__social-icon:hover {
+.home__data__social-icon {
   color: var(--first-color);
+}
+
+.home__img {
+  width: 300px;
 }
 
 .home img {
-  position: absolute;
-  right: 0;
-  bottom: 40%;
-  width: 350px;
+  width: 100%;
   border-radius: 50%;
 }
 
@@ -477,29 +475,6 @@ img {
   .nav__link {
     color: var(--second-color);
   }
-  .home {
-    height: 100vh;
-  }
-  .home__data {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-  }
-  .home__social {
-    padding-top: 0;
-    padding-bottom: 2.5rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .home__social-icon {
-    margin-bottom: 0;
-    margin-right: var(--mb-4);
-  }
-  .home__img {
-    width: 457px;
-    bottom: 15%;
-  }
   .about__container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -540,26 +515,20 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
-  .home__img {
-    right: 10%;
-  }
 }
 
 @media screen and (max-width: 768px) {
   .bd-grid {
     grid-column-gap: 2rem;
   }
-  .home {
-    margin-left: 40px;
-  }
-  .home__data {
-    margin: auto;
-  }
-  .home img {
-    display: none;
-  }
   .home__social-icon {
     margin-left: 35px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .home img {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */
