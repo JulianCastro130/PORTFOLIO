@@ -1,19 +1,19 @@
-/*===== GOOGLE FONTS =====*/
+/*GOOGLE FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/*===== VARIABLES CSS =====*/
+/*VARIABLES*/
 :root{
     --header-height: 3rem;
     --font-semi: 600;
 }
 
-/*===== Colores =====*/
+/*Colores*/
 :root{
     --first-color: #f4c440;
     --second-color: #0E2431;
 }
 
-/*===== Fuente y tipografia =====*/
+/*Fuente y tipografia*/
 :root{
     --body-font: 'Poppins', sans-serif;
 
@@ -28,7 +28,7 @@
     }
 }
 
-/*===== Margenes =====*/
+/*Margenes*/
 :root{
     --mb-1: 0.5rem;
     --mb-2: 1rem;
@@ -38,16 +38,14 @@
     --mb-6: 3rem;
 }
 
-/*===== z index =====*/
+/*z index*/
 :root{
     --z-back: -10;
     --z-normal: 1;
     --z-tooltip: 10;
     --z-fixed: 100;
 }
-/*====
-
-/*===== BASE =====*/
+/*BASE*/
 *,::before,::after{
     box-sizing: border-box;
 }
@@ -77,7 +75,6 @@ img{
     display: block; // borra los espacios en blanco
 }
 
-/*===== CLASS CSS ===== */
 .section-title{
     position: relative;
     font-size: var(--h2-font-size);
@@ -103,7 +100,6 @@ img{
     padding-bottom: 2rem;
 }
 
-/*===== LAYOUT =====*/
 .bd-grid{
     max-width: 1024px;
     display: grid;
@@ -123,7 +119,7 @@ img{
     box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
 
-/*===== NAV =====*/
+/*NAV*/
 .nav{
     height: var(--header-height);
     display: flex;
@@ -184,7 +180,7 @@ img{
     background-color: var(--first-color);
 }
 
-/*=== Show menu ===*/
+/*Show menu*/
 .show{
     right: 0;
 }
@@ -233,7 +229,7 @@ img{
     }
 }
 
-/* ===== ABOUT =====*/
+/*ABOUT*/
 .about{
     &__container{
         row-gap: 2rem;
@@ -253,7 +249,7 @@ img{
     }
 }
 
-/* ===== SKILLS =====*/
+/*SKILLS*/
 .skills{
     &__container{
         row-gap: 2rem;
@@ -310,7 +306,7 @@ img{
         border-radius: .5rem;
     }
 }
-/* ===== WORK =====*/
+/*WORK*/
 .work{
     &__container{
         row-gap: 2rem;
@@ -331,7 +327,7 @@ img{
     }
 }
 
-/* ===== CONTACT =====*/
+/*CONTACT*/
 .contact{
     &__input{
         width: 100%;
@@ -353,7 +349,7 @@ img{
     }
 }
 
-/* ===== FOOTER =====*/
+/*FOOTER*/
 .footer{
     background-color: var(--second-color);
     color: #fff;
@@ -411,10 +407,6 @@ img{
             color: var(--second-color);
         }
     }
-    .home{
-
-    }
-
     .about{
         &__container{
             grid-template-columns: repeat(2,1fr);
@@ -471,5 +463,13 @@ img{
         & img {
             display: none;
         }
+    }
+}
+@media screen and(max-width: 360px){
+    .home__social-icon{
+        margin-left: 0px;
+    }
+    .contact__button {
+        width: 49%;
     }
 }
