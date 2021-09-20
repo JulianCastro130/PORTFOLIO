@@ -1,14 +1,15 @@
 <?php
-    $destinatarios = 'cococastro619@gmail.com';
+if(isset($_POST["submit"])) {
+$recipient = "cococastro619@gmail.com"; //my email
+echo $name = $_POST ["yourName"];
+echo $email = $_POST["yourEmail"];
+echo  $message = $_POST["yourMessage"];
 
-    $nombre = $_POST['NOMBRE'];
-    $email = $_POST['email'];
-    $mensaje = $_POST['mensaje'];
+ $mailBody="Name: $name\nEmail: $email\n\n$message"; 
 
-    $header = "Alguien que visitó la página te envío esto.";
-    $mensajeCompleto = $mensaje . "\nAntentamente: " . $nombre;
+ mail($recipient, $mailBody, "From: $name <$email>");
 
-    mail($destinatario, $asunto, $mensaje, $telefono, $header);
-    echo "<script>alert('coreo enviado')</script>";
-    echo "<script> setTimeout(\"location.href='index.html'\",1000) </script>";
+echo $gracias="<p>Gracias! Voy a comunicarme contigo a la brevedad.</p>";
+
+}
 ?>
