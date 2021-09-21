@@ -9,7 +9,7 @@ echo  $message = $_POST["yourMessage"];
 
  mail($recipient, $mailBody, "From: $name <$email>");
 
-echo $gracias="<p>Gracias! Voy a comunicarme contigo a la brevedad.</p>";
+echo $gracias="<p>Gracias! Me voy a comunicar contigo a la brevedad.</p>";
 
 }
 ?>
