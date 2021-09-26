@@ -11,7 +11,7 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('nav-toggle','nav-menu')
 
-/* ACTIVE AND REMOVE MENU */
+/* ACTIVO Y DESACTIVO MENU */
 const navLink = document.querySelectorAll('.nav__link');   
 
 function linkAction(){
@@ -19,13 +19,13 @@ function linkAction(){
   navLink.forEach(n => n.classList.remove('active'));
   this.classList.add('active');
   
-  /*Remove menu mobile*/
+  /*Borrar menu mobile*/
   const navMenu = document.getElementById('nav-menu')
   navMenu.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-/*===== SCROLL REVEAL ANIMATION =====*/
+/*===== SCROLL REVEAL =====*/
 const sr = ScrollReveal({
     origin: 'top',
     distance: '80px',
